@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>Hosting Panel</title>
+<title>Login</title>
 
 <style>
 body{
@@ -9,39 +9,52 @@ background:#0f172a;
 color:white;
 font-family:Arial;
 text-align:center;
+margin-top:100px;
 }
 
-.card{
-background:#1e293b;
-padding:20px;
-margin:20px auto;
-width:300px;
-border-radius:10px;
+input{
+padding:10px;
+margin:10px;
+border-radius:5px;
+border:none;
 }
 
 button{
-padding:10px;
+padding:10px 20px;
 background:#22c55e;
 border:none;
 color:white;
 border-radius:5px;
+cursor:pointer;
 }
 </style>
+
+<script>
+function login(){
+
+var user=document.getElementById("username").value;
+var pass=document.getElementById("password").value;
+
+if(user=="admin" && pass=="1234"){
+window.location.href="dashboard.html";
+}
+else{
+alert("Wrong login");
+}
+
+}
+</script>
 
 </head>
 
 <body>
 
-<h1>Server Dashboard</h1>
+<h1>Minecraft Hosting Login</h1>
 
-<div class="card">
-<h2>Server Controls</h2>
+<input id="username" placeholder="Username"><br>
+<input id="password" type="password" placeholder="Password"><br>
 
-<button>Start Server</button>
-<button>Stop Server</button>
-<button>Restart</button>
-
-</div>
+<button onclick="login()">Login</button>
 
 </body>
 </html>
