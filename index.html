@@ -2,6 +2,7 @@
 <html>
 <head>
 <title>Minecraft Hosting Panel</title>
+
 <style>
 body{
 background:#0f172a;
@@ -10,38 +11,62 @@ font-family:Arial;
 text-align:center;
 }
 
-.panel{
-background:#1e293b;
+.header{
+background:#020617;
 padding:20px;
-margin:40px;
+}
+
+.container{
+margin-top:40px;
+}
+
+.card{
+background:#1e293b;
+margin:20px auto;
+padding:20px;
+width:300px;
 border-radius:10px;
 }
 
 button{
-padding:10px;
-background:#22c55e;
+padding:10px 20px;
 border:none;
+background:#22c55e;
 color:white;
 border-radius:5px;
 cursor:pointer;
+margin:5px;
 }
+
+button:hover{
+background:#16a34a;
+}
+
 </style>
 </head>
 
 <body>
 
-<h1>Minecraft Hosting Panel</h1>
-
-<div class="panel">
-<h2>Create Server</h2>
-<p>RAM: 2GB</p>
-<button>Create</button>
+<div class="header">
+<h1>My Minecraft Hosting</h1>
+<p>Free Minecraft Server Panel</p>
 </div>
 
-<div class="panel">
+<div class="container">
+
+<div class="card">
+<h2>Create Server</h2>
+<p>2GB RAM Server</p>
+<button>Create Server</button>
+</div>
+
+<div class="card">
 <h2>Manage Server</h2>
 <button>Start</button>
 <button>Stop</button>
+<button>Restart</button>
+</div>
+
 </div>
 
 </body>
