@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>Minecraft Hosting Panel</title>
+<title>Login</title>
 
 <style>
 body{
@@ -9,65 +9,52 @@ background:#0f172a;
 color:white;
 font-family:Arial;
 text-align:center;
+margin-top:100px;
 }
 
-.header{
-background:#020617;
-padding:20px;
-}
-
-.container{
-margin-top:40px;
-}
-
-.card{
-background:#1e293b;
-margin:20px auto;
-padding:20px;
-width:300px;
-border-radius:10px;
+input{
+padding:10px;
+margin:10px;
+border-radius:5px;
+border:none;
 }
 
 button{
 padding:10px 20px;
-border:none;
 background:#22c55e;
+border:none;
 color:white;
 border-radius:5px;
 cursor:pointer;
-margin:5px;
 }
-
-button:hover{
-background:#16a34a;
-}
-
 </style>
+
+<script>
+function login(){
+
+var user=document.getElementById("username").value;
+var pass=document.getElementById("password").value;
+
+if(user=="admin" && pass=="1234"){
+window.location.href="dashboard.html";
+}
+else{
+alert("Wrong login");
+}
+
+}
+</script>
+
 </head>
 
 <body>
 
-<div class="header">
-<h1>My Minecraft Hosting</h1>
-<p>Free Minecraft Server Panel</p>
-</div>
+<h1>Minecraft Hosting Login</h1>
 
-<div class="container">
+<input id="username" placeholder="Username"><br>
+<input id="password" type="password" placeholder="Password"><br>
 
-<div class="card">
-<h2>Create Server</h2>
-<p>2GB RAM Server</p>
-<button>Create Server</button>
-</div>
-
-<div class="card">
-<h2>Manage Server</h2>
-<button>Start</button>
-<button>Stop</button>
-<button>Restart</button>
-</div>
-
-</div>
+<button onclick="login()">Login</button>
 
 </body>
 </html>
